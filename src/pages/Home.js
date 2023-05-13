@@ -6,7 +6,7 @@ import MovieGallery from '../components/MovieGallery';
 
 function Home() {
 
-  const{credentialStatus,setCredentialStatus}=useContext(CredentialContext)
+  const{credentialStatus}=useContext(CredentialContext)
   
   return (
     <div className="home__conteiner">
