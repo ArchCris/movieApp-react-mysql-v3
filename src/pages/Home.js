@@ -7,7 +7,7 @@ import MovieGallery from '../components/MovieGallery';
 function Home() {
 
   const{credentialStatus,setCredentialStatus}=useContext(CredentialContext)
-  console.log(credentialStatus)
+  
   return (
     <div className="home__conteiner">
       {!credentialStatus ?
