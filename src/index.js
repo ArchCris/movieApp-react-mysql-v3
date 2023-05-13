@@ -10,7 +10,6 @@ import ContextProvider from './context/ContextProvider';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
- 
     <ContextProvider>
       <BrowserRouter>
         <Routes>
@@ -22,7 +21,6 @@ root.render(
         </Routes>
       </BrowserRouter>
     </ContextProvider>
-  
 );
 
 // If you want to start measuring performance in your app, pass a function
