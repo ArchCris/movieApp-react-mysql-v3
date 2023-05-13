@@ -1,0 +1,14 @@
+.movieGallery__conteiner{
+    padding: 2rem 2rem;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    place-items: center;
+}
+.movie__detail{
+    height: 100%;
+    width: 100%;
+    background-color: red;
+}
+

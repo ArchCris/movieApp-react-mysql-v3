@@ -1,0 +1,5 @@
+.find__conteiner{
+  padding: 2rem 2rem;
+  min-height: 85vh;
+  background-color: var(--color-two);
+}

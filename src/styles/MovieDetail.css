@@ -1,0 +1,43 @@
+.movieDetail__conteiner{
+  background-color: var(--color-three);
+  height: calc(90vh - 4rem);
+  width: 100%;
+  display: flex;
+}
+.movieDetail__poster{
+  width: auto;
+}
+.movieDetail__data{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  height: 100%;
+  width: auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.identifier{
+  width: fit-content;
+  padding: .1rem .4rem;
+  color: var(--color-five);
+  background-color: var(--color-one);
+  margin-bottom: .2rem;
+}
+.movieDetail__title{
+  font-weight: 600;
+  color: aliceblue;
+}
+.movieDetail__caption{
+  margin: 1rem 0 0 0;
+  font-weight: 400;
+  color: aliceblue;
+}
+/**/
+.movieDetail__conteiner2{
+  height: 100vh;
+  width: 100%;
+}
+.genre{
+  margin: 0 .2rem;
+}

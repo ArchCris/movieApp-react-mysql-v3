@@ -1,0 +1,8 @@
+.home__conteiner{
+    min-height: 85vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:  var(--color-two);
+}
