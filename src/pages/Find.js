@@ -16,11 +16,12 @@ const Find = () => {
   
   return (
     <div className='find__conteiner'>
-     
+      {credentialStatus ?
       <MovieDetail movieId={movieId}/>
-      
+      : null}
+      {credentialStatus ?
       <Comments movieId={movieId}/>
-     
+      : null}
     </div>
   )
 }
