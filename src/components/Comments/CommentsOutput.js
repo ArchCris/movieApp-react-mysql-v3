@@ -21,9 +21,8 @@ const CommentsOutput = ({movieId,setCommentsToSHow,commentsToSHow}) => {
 
   const deleteComment = (id) => {
     axios.post(`${process.env.REACT_APP_LOCAL_URL}/deleteComment`,{commentId:id})
-        .then(resp=>{     
-            setCommentsToSHow(commentsToSHow=>[...commentsToSHow.filter(comment=>comment.idcomments!==id)])
-            getComments()
+        .then(resp=>{
+            getComments()     
         }).catch(error=>{
             console.log(error)
         })
