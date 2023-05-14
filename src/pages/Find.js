@@ -13,7 +13,6 @@ const Find = () => {
   axios.defaults.withCredentials=true
 
   let movieId = useParams();
-
   
   return (
     <div className='find__conteiner'>
