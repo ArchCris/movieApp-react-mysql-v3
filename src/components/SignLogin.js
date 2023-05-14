@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import axios from 'axios'
 import '../styles/SignLogin.css'
 import { CredentialContext } from '../context/ContextProvider'
@@ -52,17 +52,6 @@ const SignLogin = () => {
         })
     }
 
-    //Check session
-    useEffect(() => {
-        axios.get(`${process.env.REACT_APP_LOCAL_URL}/login`,{ withCredentials: true })
-        .then(resp=>{
-            if(resp.data.loggedIn===true){
-                setCredentialStatus(resp)
-            }
-        }).catch(error=>{
-            console.log(error)
-        })
-    }, []);
 
   return (
     <div className='SignLogin__conteiner-out'>
