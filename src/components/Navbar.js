@@ -10,6 +10,8 @@ import LiveSearch from './LiveSearch'
 
 const Navbar = () => {
 
+    axios.defaults.withCredentials=true
+
     //Credential from context
     const{credentialStatus,setCredentialStatus}=useContext(CredentialContext)
 
