@@ -2,9 +2,12 @@ import React from 'react'
 import { useState,useEffect } from 'react'
 import '../styles/MovieDetail.css'
 import ScoreBadge from './ScoreBadge'
+import axios from 'axios'
 
 
 const MovieDetail = (props) => {
+
+  axios.defaults.withCredentials=true
 
   const[detailMovie,setDetailMovie]=useState(null)
 
@@ -27,6 +30,7 @@ const MovieDetail = (props) => {
   }
 
   useEffect(() => {
+    console.log('get specific movie')
     getSpecificMovie()
   }, []);
 

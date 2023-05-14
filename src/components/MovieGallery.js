@@ -6,6 +6,8 @@ import MovieCard from './MovieCard'
 
 const MovieGallery = () => {
 
+  axios.defaults.withCredentials=true
+
     const[moviesToDisplay,setMoviesToDisplay]=useState([])
   
     const getPopularMovies = async () =>{
