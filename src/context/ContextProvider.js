@@ -5,7 +5,7 @@ export const CredentialContext = createContext()
 
 const ContextProvider = ({children}) => {
 
-    const[credentialStatus,setCredentialStatus]=useState([{username:'cris'}])
+    const[credentialStatus,setCredentialStatus]=useState(null)
 
   return (
     <CredentialContext.Provider value={{credentialStatus:credentialStatus,setCredentialStatus:setCredentialStatus}}>
