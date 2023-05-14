@@ -14,10 +14,6 @@ const CommentsOutput = ({movieId,setCommentsToSHow,commentsToSHow}) => {
     axios.post(`${process.env.REACT_APP_LOCAL_URL}/getcomments`,{movieid:movieId})
         .then(resp=>{      
             setCommentsToSHow(resp.data)
-            /*
-            console.log(commentsToSHow)
-            getComments()
-            */
         }).catch(error=>{
             console.log(error)
         })
@@ -26,7 +22,7 @@ const CommentsOutput = ({movieId,setCommentsToSHow,commentsToSHow}) => {
   const deleteComment = (id) => {
     axios.post(`${process.env.REACT_APP_LOCAL_URL}/deleteComment`,{commentId:id})
         .then(resp=>{     
-            setCommentsToSHow(commentsToSHow=>[...commentsToSHow.filter(comment=>comment.idcomments===id)])
+            setCommentsToSHow(commentsToSHow=>[...commentsToSHow.filter(comment=>comment.idcomments!==id)])
             getComments()
         }).catch(error=>{
             console.log(error)
