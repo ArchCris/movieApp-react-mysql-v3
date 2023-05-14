@@ -22,7 +22,7 @@ const SignLogin = () => {
     const[signMessage,setSignMessage]=useState(null)
 
     const handleSignUp = () => {
-        axios.post(`${process.env.REACT_APP_LOCAL_URL}/signup`,{username:signName,password:signPassword})
+        axios.post(`${process.env.REACT_APP_LOCAL_URL}/signup`,{username:signName,password:signPassword},{ withCredentials: true })
         .then(resp=>{
             if(resp.data.message){
                 setSignMessage(resp.data.message)
@@ -40,7 +40,7 @@ const SignLogin = () => {
     const[loginMessage,setLoginMessage]=useState(null)
 
     const handleLogIn = () => {
-        axios.post(`${process.env.REACT_APP_LOCAL_URL}/login`,{username:logName,password:logPassword})
+        axios.post(`${process.env.REACT_APP_LOCAL_URL}/login`,{username:logName,password:logPassword},{ withCredentials: true })
         .then(resp=>{
             if(resp.data.loggedIn===true){
                 setLoginMessage('User logged')
@@ -54,7 +54,7 @@ const SignLogin = () => {
 
     //Check session
     useEffect(() => {
-        axios.get(`${process.env.REACT_APP_LOCAL_URL}/login`)
+        axios.get(`${process.env.REACT_APP_LOCAL_URL}/login`,{ withCredentials: true })
         .then(resp=>{
             if(resp.data.loggedIn===true){
                 setCredentialStatus(resp)
