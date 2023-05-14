@@ -20,6 +20,7 @@ const CommentsOutput = ({movieId,setCommentsToSHow,commentsToSHow}) => {
   }
 
   const deleteComment = (id) => {
+          getComments() 
     axios.post(`${process.env.REACT_APP_LOCAL_URL}/deleteComment`,{commentId:id})
         .then(resp=>{
             getComments()     
