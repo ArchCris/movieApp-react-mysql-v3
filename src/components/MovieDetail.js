@@ -30,7 +30,6 @@ const MovieDetail = (props) => {
   }
 
   useEffect(() => {
-    console.log('get specific movie')
     getSpecificMovie()
   }, []);
 
