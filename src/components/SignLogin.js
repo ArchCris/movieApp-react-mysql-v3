@@ -73,7 +73,7 @@ const SignLogin = () => {
                 <label>Name:</label>
                 <input onChange={(e)=>{setSignName(e.target.value)}} type='text' required></input>
                 <label>Password:</label>
-                <input onChange={(e)=>{setSignPassword(e.target.value)}} type='text' required></input>
+                <input onChange={(e)=>{setSignPassword(e.target.value)}} type='password' required></input>
                 <p className='signUp__message'>{signMessage}</p>
                 <button onClick={()=>handleSignUp()}>Sign up</button>
             </div>
@@ -82,7 +82,7 @@ const SignLogin = () => {
                 <label>Name:</label>
                 <input onChange={(e)=>{setLogName(e.target.value)}} type='text' required></input>
                 <label>Password:</label>
-                <input onChange={(e)=>{setLogPassword(e.target.value)}} type='text' required></input>
+                <input onChange={(e)=>{setLogPassword(e.target.value)}} type='password' required></input>
                 <p className='signUp__message'>{loginMessage}</p>
                 <button onClick={()=>handleLogIn()}>Log in</button>
             </div>
