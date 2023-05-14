@@ -7,8 +7,10 @@ import Layout from './pages/Layout';
 import Find from './pages/Find';
 import reportWebVitals from './reportWebVitals';
 import ContextProvider from './context/ContextProvider';
+import axios from 'axios';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+axios.defaults.withCredentials=true
 root.render(
     <ContextProvider>
       <BrowserRouter>
