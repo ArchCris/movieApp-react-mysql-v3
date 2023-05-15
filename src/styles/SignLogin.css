@@ -67,3 +67,23 @@
     justify-content: center;
     align-items: center;
 }
+@media only screen and (max-width: 600px) {
+    .SignLogin__conteiner-out h1{
+        font-size: 1.2rem;
+    }
+    .SignLogin__conteiner-out{
+        margin-top: 1rem;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    .SignLogin__conteiner{
+        flex-direction: column;
+        padding: 0rem 1rem;
+        padding-bottom: 1rem;
+    }
+    .signUp__section{
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+}
