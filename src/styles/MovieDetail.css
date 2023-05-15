@@ -41,3 +41,10 @@
 .genre{
   margin: 0 .2rem;
 }
+@media only screen and (max-width: 600px) {
+  .movieDetail__conteiner{
+    height: auto;
+    flex-direction: column;
+  }
+
+}

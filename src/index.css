@@ -10,3 +10,8 @@
   --color-four:#363639;
   --color-five:white;
 }
+@media only screen and (max-width: 600px) {
+  .App{
+    overflow-x: hidden;
+  }
+}
