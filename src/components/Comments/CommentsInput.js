@@ -4,7 +4,7 @@ import { CredentialContext } from '../../context/ContextProvider'
 import axios from 'axios'
 import '../../styles/Comments/CommentsInput.css'
 
-const CommentsInput = ({movieId,getComments,setCommentsToSHow}) => {
+const CommentsInput = ({movieId,commentsToSHow,setCommentsToSHow}) => {
 
   const[comment,setComment]=useState(null)
 
