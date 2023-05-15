@@ -19,6 +19,7 @@ const Comments = ({movieId}) => {
   }
 
   useEffect(() => {
+    console.log("Getting comments")
     getComments()
   }, []);
 

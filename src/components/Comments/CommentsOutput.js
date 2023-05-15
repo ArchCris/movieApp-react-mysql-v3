@@ -19,7 +19,6 @@ const CommentsOutput = ({commentsToSHow,getComments}) => {
         })
   }
 
-
   return (
     <div className='commentsOutput__conteiner'>
       {commentsToSHow?.map((comment,key)=>{
