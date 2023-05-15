@@ -4,7 +4,7 @@ import { CredentialContext } from '../../context/ContextProvider'
 import axios from 'axios'
 import '../../styles/Comments/CommentsInput.css'
 
-const CommentsInput = ({movieId,commentsToSHow,setCommentsToSHow}) => {
+const CommentsInput = ({movieId,getComments,setCommentsToSHow}) => {
 
   const[comment,setComment]=useState(null)
 
@@ -30,6 +30,7 @@ const CommentsInput = ({movieId,commentsToSHow,setCommentsToSHow}) => {
         .then(resp=>{         
             setCommentsToSHow(commentsToSHow=>[...commentsToSHow,{movieid:movieId,username:username,comment:comment,date:time}])
             setComment('')
+            getComments()
         }).catch(error=>{
             console.log(error)
         })
