@@ -5,22 +5,19 @@ import { useContext } from 'react';
 import { CredentialContext } from '../../context/ContextProvider';
 
 
-const CommentsOutput = ({movieId,setCommentsToSHow,commentsToSHow,getComments}) => {
+const CommentsOutput = ({commentsToSHow,getComments}) => {
 
   //Credential from context
   const{credentialStatus}=useContext(CredentialContext)
 
   const deleteComment = (id) => {
     axios.post(`${process.env.REACT_APP_LOCAL_URL}/deleteComment`,{commentId:id})
-        .then(resp=>{    
+        .then(resp=>{ 
+          getComments()   
         }).catch(error=>{
             console.log(error)
         })
   }
-
-  useEffect(() => {
-    getComments()
-  }, []);
 
 
   return (

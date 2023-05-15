@@ -28,7 +28,7 @@ const CommentsInput = ({movieId,setCommentsToSHow,getComments}) => {
 
     axios.post(`${process.env.REACT_APP_LOCAL_URL}/comment`,{movieid:movieId,username:username,comment:comment,date:time})
         .then(resp=>{         
-        /*    setCommentsToSHow(commentsToSHow=>[...commentsToSHow,{movieid:movieId,username:username,comment:comment,date:time}])*/
+            setCommentsToSHow(commentsToSHow=>[...commentsToSHow,{movieid:movieId,username:username,comment:comment,date:time}])
             setComment('')
             getComments()
         }).catch(error=>{

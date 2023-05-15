@@ -2,7 +2,7 @@ import React from 'react'
 import '../../styles/Comments/Comments.css'
 import CommentsInput from './CommentsInput'
 import CommentsOutput from './CommentsOutput'
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
 import axios from 'axios'
 
 const Comments = ({movieId}) => {
@@ -17,6 +17,11 @@ const Comments = ({movieId}) => {
             console.log(error)
         })
   }
+
+  useEffect(() => {
+    getComments()
+  }, []);
+
 
   return (
     <div className='comments__conteiner'>
