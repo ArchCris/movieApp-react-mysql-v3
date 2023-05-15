@@ -30,7 +30,6 @@ const CommentsInput = ({movieId,getComments,setCommentsToSHow}) => {
         .then(resp=>{         
             setCommentsToSHow(commentsToSHow=>[...commentsToSHow,{movieid:movieId,username:username,comment:comment,date:time}])
             setComment('')
-            getComments()
         }).catch(error=>{
             console.log(error)
         })

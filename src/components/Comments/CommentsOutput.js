@@ -5,7 +5,7 @@ import { useContext } from 'react';
 import { CredentialContext } from '../../context/ContextProvider';
 
 
-const CommentsOutput = ({movieId,setCommentsToSHow,commentsToSHow,getComments}) => {
+const CommentsOutput = ({commentsToSHow,getComments}) => {
 
   //Credential from context
   const{credentialStatus}=useContext(CredentialContext)
